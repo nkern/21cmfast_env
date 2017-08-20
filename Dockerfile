@@ -73,7 +73,7 @@ RUN mkdir /fftw_float && \
 # Download 21cmFAST and Set ENV Variables
 RUN git clone https://github.com/nkern/21cmFAST
 ENV cppflags="-L/fftw_float/lib -I/fftw_float/include"
-ENV ldflags="-L/gnu/gsl/lib -I/gnu/gsl/lib -I/gnu/gsl/include -L/fftw_float/lib -lgsl -lgslcblas -lfftw3f_omp -lfftw3f -lm"
+ENV ldflags="-L/gnu/gsl/lib -I/gnu/gsl/include -L/fftw_float/lib -lgsl -lgslcblas -lfftw3f_omp -lfftw3f -lm"
 ENV LD_LIBRARY_PATH="/gnu/gsl/lib"
 
 # build info
