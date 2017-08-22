@@ -47,6 +47,10 @@ RUN pip --no-cache-dir install \
         scipy \
         sklearn \
         astropy \
+        pyDOE \
+        corner \
+        emcee \
+        memory_profiler \
         && \
     python -m ipykernel.kernelspec
 
