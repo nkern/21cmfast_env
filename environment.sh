@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 
 ## Env variables for 21cmFAST
 export cppflags="-L/fftw_float/lib -I/fftw_float/include"
