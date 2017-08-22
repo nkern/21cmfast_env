@@ -73,9 +73,10 @@ make install
 
 # Download 21cmFAST and Set ENV Variables
 git clone https://github.com/nkern/21cmFAST && \
-export cppflags="-L/fftw_float/lib -I/fftw_float/include" && \
-export ldflags="-L/gnu/gsl/lib -I/gnu/gsl/lib -I/gnu/gsl/include -L/fftw_float/lib -lgsl -lgslcblas -lfftw3f_omp -lfftw3f -lm" && \
-export LD_LIBRARY_PATH="/gnu/gsl/lib" && \
+chmod -R 777 21cmFAST
+
+# Download env files
+git clone https://github.com/nkern/21cmfast_env
 
 # build info
 echo "Timestamp:" `date --utc` | tee /image-build-info.txt

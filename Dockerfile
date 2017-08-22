@@ -70,11 +70,15 @@ RUN mkdir /fftw_float && \
     make >> fftw_log 2>&1 && \
     make install >> fftw_log 2>&1
 
-# Download 21cmFAST and Set ENV Variables
-RUN git clone https://github.com/nkern/21cmFAST
-ENV cppflags="-L/fftw_float/lib -I/fftw_float/include"
-ENV ldflags="-L/gnu/gsl/lib -I/gnu/gsl/include -L/fftw_float/lib -lgsl -lgslcblas -lfftw3f_omp -lfftw3f -lm"
-ENV LD_LIBRARY_PATH="/gnu/gsl/lib"
+# Download 21cmFAST
+RUN git clone https://github.com/nkern/21cmFAST && \
+    chmod -R 777 21cmFAST
+
+# Download environment files
+RUN git clone https://github.com/nkern/21cmfast_env
+
+# Note that you need to run the environment.sh script in the 
+# container in order to set proper env variables for 21cmFAST
 
 # build info
 RUN echo "Timestamp:" `date --utc` | tee /image-build-info.txt
