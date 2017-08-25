@@ -31,6 +31,7 @@ export DEBIAN_FRONTEND=noninteractive && \
         openjdk-8-jdk \
         openjdk-8-jre-headless \
         texlive \
+        texlive-latex-extra \
         vim \
         wget 
 
