@@ -30,6 +30,7 @@ export DEBIAN_FRONTEND=noninteractive && \
         zlib1g-dev \
         openjdk-8-jdk \
         openjdk-8-jre-headless \
+        texlive \
         vim \
         wget 
 
