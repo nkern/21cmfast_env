@@ -89,3 +89,6 @@ RUN git clone https://github.com/nkern/21cmfast_env
 
 # build info
 RUN echo "Timestamp:" `date --utc` | tee /image-build-info.txt
+
+# Run bash
+CMD ["/bin/bash"]
