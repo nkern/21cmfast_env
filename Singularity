@@ -12,6 +12,7 @@ export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --allow-unauthenticated \
         build-essential \
         curl \
+        dvipng \
         git \
         g++ \
         gcc \
